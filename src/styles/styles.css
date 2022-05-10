@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(234, 11%, 52%);
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-size: inherit;
+  background-color: transparent;
+  color: hsl(234, 39%, 85%);
+}
+
+h1 {
+  letter-spacing: 0.4em;
+  color: hsl(234, 39%, 85%);
+}
+
+p {
+  cursor: pointer;
+}
+
+.app {
+  background-image: url("https://res.cloudinary.com/dmaviub4l/image/upload/v1652185556/todoapp/zfzyscsobte2p0leh3qa.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(235, 21%, 11%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 35rem;
+  margin-top: 5rem;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background-color: hsl(235, 24%, 19%);
+  width: 35rem;
+  box-shadow: rgba(33, 34, 34, 0.034) 0px 8px 24px;
+  border-radius: 5px;
+}
+
+.todoInput button {
+  cursor: initial;
+}
+
+.todoContainer {
+  border-radius: 5px;
+  background-color: hsl(235, 24%, 19%);
+  width: 35rem;
+  box-shadow: rgba(33, 34, 34, 0.034) 0px 8px 24px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  color: hsl(234, 39%, 85%);
+}
+
+.todo:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+.todoFooter {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
+  color: hsl(234, 11%, 52%);
+  position: relative;
+}
+
+.todoFooter button:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.completedTodo {
+  text-decoration: line-through;
+  color: hsl(237, 14%, 26%);
+}
+
+.activeFilter {
+  color: hsl(220, 98%, 61%);
+}
+
+.checkBtn {
+  border: 1px solid hsl(237, 14%, 26%);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.checkBtn img {
+  position: absolute;
+  left: 4px;
+  bottom: 5px;
+}
+
+.deleteBtn {
+  margin-left: auto;
+  visibility: hidden;
+}
+
+.todo:hover .deleteBtn {
+  visibility: visible;
+}
+
+.completedIcon {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.attribution {
+  color: hsl(234, 11%, 52%);
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+.attribution a {
+  color: #ffd460;
+  text-decoration: none;
+}
+
+.app.light .attribution a {
+  color: #48466d;
+}
+
+/* LIGHT */
+
+.app.light {
+  background-image: url('https://res.cloudinary.com/dmaviub4l/image/upload/v1652185556/todoapp/bnbybg4sjtfdpxypkavk.jpg');
+  background-color: hsl(236, 33%, 92%);
+}
+
+.app.light .todoContainer {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.app.light .todo {
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+  color: hsl(235, 19%, 35%);
+}
+
+.app.light .checkBtn {
+  border: 1px solid hsl(233, 11%, 84%);
+}
+
+.app.light .completedTodo {
+  color: hsl(233, 11%, 84%);
+}
+
+.app.light .todoInput {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.app.light input {
+  color: hsl(235, 19%, 35%);
+}
+
+.app.light .todoFooter button:hover {
+  color: hsl(235, 24%, 19%);
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  .app {
+    background-image: url("https://res.cloudinary.com/dmaviub4l/image/upload/v1652185556/todoapp/fq2owqmgkhz9cqv1gavj.jpg");
+  }
+
+  .app.light {
+    background-image: url("https://res.cloudinary.com/dmaviub4l/image/upload/v1652185557/todoapp/hlfutctft4r3ekpeamab.jpg");
+  }
+
+  .header,
+  .todoContainer,
+  .todoInput {
+    width: 80%;
+  }
+
+  .buttons {
+    position: absolute;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    left: -0.1rem;
+    bottom: -4rem;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+  }
+
+  .app.light .buttons {
+    background-color: hsl(0, 0%, 98%);
+  }
+}
